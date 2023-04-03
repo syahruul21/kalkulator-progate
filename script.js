@@ -1,4 +1,3 @@
-//Input number
 const calculatorScreen = document.querySelector('.calculator-screen')
 const updateScreen = (number) => {
 	calculatorScreen.value = number
@@ -24,7 +23,6 @@ const inputNumber = (number) => {
 	}
 }
 
-//Input operator
 const operators = document.querySelectorAll(".operator");
 operators.forEach((operator) => {
 	operator.addEventListener("click", (event) => {
@@ -38,7 +36,6 @@ const inputOperator = (operator) => {
 	currentNumber = ''
 }
 
-//Kalkulation
 const equalSign = document.querySelector('.equal-sign')
 
 equalSign.addEventListener('click', () => {
@@ -71,8 +68,6 @@ const calculate = () => {
 	calculationOperator = ''
 }
 
-//button AC
-
 const clearBtn = document.querySelector('.all-clear')
 clearBtn.addEventListener('click', () => {
 	clearAll()
@@ -85,16 +80,12 @@ const clearAll = () => {
 	currentNumber = '0'
 }
 
-
-//Decimal
-
 inputDecimal = (dot) => {
 	if(currentNumber.includes('.')) {
 		return
 	}
 	currentNumber += dot
 }
-
 
 const decimal = document.querySelector('.decimal')
 decimal.addEventListener('click', (event) => {
